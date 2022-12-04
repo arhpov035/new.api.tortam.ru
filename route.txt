@@ -1,0 +1,19 @@
++--------+-----------+------------------------------+--------------------+---------------------------------------------------------------+------------+
+| Domain | Method    | URI                          | Name               | Action                                                        | Middleware |
++--------+-----------+------------------------------+--------------------+---------------------------------------------------------------+------------+
+|        | GET|HEAD  | /                            |                    | Closure                                                       | web        |
+|        | POST      | api/v1/auth/login            | auth.login         | App\Http\Controllers\Api\V1\Auth\LoginController@login        | api        |
+|        | DELETE    | api/v1/auth/logout           | auth.logout        | App\Http\Controllers\Api\V1\Auth\LoginController@logout       | api        |
+|        | GET|HEAD  | api/v1/auth/user             | auth.user          | App\Http\Controllers\Api\V1\Auth\LoginController@user         | api        |
+|        | GET|HEAD  | api/v1/categories            | categories.index   | App\Http\Controllers\Api\V1\ProductCategoryController@index   | api        |
+|        | POST      | api/v1/categories            | categories.store   | App\Http\Controllers\Api\V1\ProductCategoryController@store   | api        |
+|        | GET|HEAD  | api/v1/categories/{category} | categories.show    | App\Http\Controllers\Api\V1\ProductCategoryController@show    | api        |
+|        | PUT|PATCH | api/v1/categories/{category} | categories.update  | App\Http\Controllers\Api\V1\ProductCategoryController@update  | api        |
+|        | DELETE    | api/v1/categories/{category} | categories.destroy | App\Http\Controllers\Api\V1\ProductCategoryController@destroy | api        |
+|        | POST      | api/v1/product               | product.store      | App\Http\Controllers\Api\V1\ProductController@store           | api        |
+|        | GET|HEAD  | api/v1/product/{product}     | product.show       | App\Http\Controllers\Api\V1\ProductController@show            | api        |
+|        | PUT|PATCH | api/v1/product/{product}     | product.update     | App\Http\Controllers\Api\V1\ProductController@update          | api        |
+|        | DELETE    | api/v1/product/{product}     | product.destroy    | App\Http\Controllers\Api\V1\ProductController@destroy         | api        |
+|        | GET|HEAD  | api/v1/products/{skip?}      | products.index     | App\Http\Controllers\Api\V1\ProductController@index           | api        |
+|        | GET|HEAD  | api/v1/sanctum/csrf-cookie   |                    | Laravel\Sanctum\Http\Controllers\CsrfCookieController@show    | web        |
++--------+-----------+------------------------------+--------------------+---------------------------------------------------------------+------------+

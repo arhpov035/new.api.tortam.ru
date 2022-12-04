@@ -1,0 +1,2 @@
+GET http://api.tortam.ru/api/v1/product/tort-lyubimoj-mamochke
+Accept: application/json
