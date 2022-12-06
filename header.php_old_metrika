@@ -1,0 +1,643 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?
+$arr410 = array(
+	"/adresa-klinik/%D0%BC%D0%B5%D0%B4%D1%81%D0%B2%D0%B8%D1%81",
+	"/nashi-vrachi/kozachuk-yuriy-valerevich/",
+	"/adresa-klinik/%20%D1%81%D0%B0%D0%BD%D0%BA",
+	"/adresa-klinik/%20%D1%81%D0%BF%D0%B1",
+	"/adresa-klinik/%20%D1%80%D0%B0%D0%BF%D0%B8%D1%86%D0%BA%D0%B0%D1%8F",
+	"/adresa-klinik/medswiss-na-",
+	"/adresa-klinik/medswiss-na-nikitskom",
+	"/library/interesnoe-o-meditsin",
+	"/library/bronkhialnaya-astma-kak-predotvratit-razvitie-pristupa",
+	"/library/adrenalin-bronkhialnaya-astma-i-endokrinologiya",
+	"/library/spravochnaya-informatsiya/pravila-sdachi-analizov-mochi/%D0%BF%D0%B5%D1%81%D0%BD%D1%8F%20%D0%BA%D0%B8%D1%80%D0%BA%D0%BE%D1%80%D0%BE%D0%B2%D0%B0",
+	"/nashi-vrachi/pankratev-yuriy-leonidovich/%D1%81%D1%89%D1%8C%D0%B7%D0%B3%D0%B5%D1%83%D0%BA%20%D1%89%D1%82%D0%B4%D1%88%D1%82%D1%83%20%D1%8B%D0%B5%D1%89%D0%BA%D1%83",
+	"/nashi-vrachi/bystrova-tatyana-viktorovna/%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B",
+	"/library/entsiklopediya-bolezney/zheludochno-kishechnye-zabolevaniya-i-psikhologicheskie-problemy/&ved=2ahUKEwiryqiAx5X4AhUuCRAIHbkUCN8QFnoECAYQAQ&usg=AOvVaw0_OwKIiJlr1xnE3RRzRW55",
+	"/test_kf.php",
+	"/uslugi/immunologicheskie-issledovaniya/immunologicheskie-issledovaniya/",
+	"/uslugi/endoskopiya/endoskopiya/",
+	"/uslugi/tsitologicheskie-issledovaniya/tsitologicheskie-issledovaniya/",
+	"/uslugi/issledovanie-biologicheskikh-zhidkostey/issledovanie-biologicheskikh-zhidkostey/",
+	"/uslugi/oftalmologiya/oftalmologiya-uslugi/",
+	"/uslugi/uzi/uzi/",
+	"/sitemap.php?",
+	"/uslugi/statsionar/statsionar/",
+	"/nashi-vrachi/lushchin-sergey-leonidovich/%20%D1%81%D0%B0%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D0%BE%D0%B2/",
+	"/uslugi/endokrinologiya/endokrinologiya-uslugi/",
+	"/uslugi/nevrologiya/nevrologiya-uslugi/",
+	"/uslugi/anesteziologiya/anesteziologiya/",
+	"/nashi-vrachi/ivanova-marina-aleksandrovna/&ved=2ahUKEwiwzZWEvK7rAhVs_SoKHX-iCTIQFjAFegQIARAB&usg=AOvVaw1VedOhcpHoTRFgpjz0VCld&cshid=1598087623649",
+	"/library/zdorovyy-obraz-zhizni/kokosovaya-voda-pit-ili-ne-pit/Star%20Renegades/",
+	"/uslugi/onkomarkery/onkomarkery/",
+	"/uslugi/meditsinskiy-massazh/meditsinskiy-massazh-uslugi/",
+	"/uslugi/?sect=44&",
+	"/uslugi/allergologiya/allergologiya/",
+	"/uslugi/protsedurnyy-kabinet/protsedurnyy-kabinet/",
+	"/uslugi/dermatologiya/dermatologiya-uslugi/",
+	"/uslugi/kardiologiya/kardiologiya-uslugi/",
+	"/nashi-vrachi/saykovskiy-sergey-romanovich/%D0%BE%D0%BD/",
+	"/uslugi/geneticheskie-issledovaniya/geneticheskie-issledovaniya/",
+	"/fotokonkurs/msgram.php?page=1",
+	"/fotokonkurs/msgram.php?bitrix_include_areas=N",
+	"/fotokonkurs/msgram.php?page=3",
+	"/fotokonkurs/msgram.php?page=4",
+	"/programmy/?progtype=complex&menu=Y",
+	"/programmy/?progtype=clinic&menu=Y"
+);
+
+if (in_array( $_SERVER['REQUEST_URI'], $arr410 )) {
+	header("HTTP/1.1 410 Gone");
+	die();
+}
+?>
+<?IncludeTemplateLangFile(__FILE__);?>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<?$APPLICATION->ShowHead()?>
+		<?CUtil::InitJSCore(Array("ajax"));?>
+		<title><?$APPLICATION->ShowTitle()?></title>
+		<link rel="shortcut icon" href="/local/img/favicon.png?12" type="image/png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link href="/local/css/jquery-ui.min.css" rel="stylesheet">
+		<link href="/local/css/owl.carousel.css" rel="stylesheet">
+		<link href="/local/css/main.css?9" rel="stylesheet">
+		<link href="/local/css/custom.css" rel="stylesheet">
+        <link rel="stylesheet" href="/local/css/stancionar.css" />
+
+		<script src="/local/js/libs/jquery-2.1.1.min.js"></script>
+
+		<script src="/local/js/reviews.js"></script>
+
+		<script src="/local/js/libs/owl.carousel.min.js"></script>
+		<script src="/local/js/libs/owl.carousel2.thumbs.min.js"></script>
+		<script src="/local/js/main.js?19"></script>
+		<script src="/local/js/stancionar.js"></script>
+
+		<script src="/local/js/libs/jquery.formstyler.min.js"></script>
+		<!-- script src="/local/js/snowfall.min.js"></script -->
+		<!-- script>
+			$(document).ready(function() {
+				if(location.pathname == "/") {
+					snowFall.snow(document.getElementsByTagName('body')[0], {image : "/local/img/flsk.png",  minSize: 20, maxSize:42})
+				}
+			});
+		</script -->
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+		<meta property="og:description" content="<?$APPLICATION->ShowProperty('description');?>" />
+		<meta property="og:title" content="<?$APPLICATION->ShowTitle()?>"/>
+		<meta property="og:site_name" content="Медицинский центр MedSwiss"/>
+		<meta property="og:locale" content="ru_RU"/>
+		<meta property="og:image" content="https://www.medswiss.ru/local/img/logo-new.svg"/>
+		<meta property="og:url" content= "https://www.medswiss.ru<?=$_SERVER['REQUEST_URI'];?>" />
+		<meta name="yandex-verification" content="9a99df7a507bf278" />
+		<meta name="google-site-verification" content="ZCpRcMIr-OKCAGY0BWTccqi2Wxo_YYo1H4ms9PWlJx8" />
+
+	     <?
+	     if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/d-robots.php') && $_SERVER['REQUEST_URI']!=='/uslugi/?sect=44') {
+		    include_once ($_SERVER['DOCUMENT_ROOT'] . '/d-robots.php');
+		    $dRobots = dRobots::fromFile();
+		    $noindex = $dRobots->checkUrl($_SERVER['REQUEST_URI']) ? '<meta name="googlebot" content="noindex">' . PHP_EOL : '';
+		} else $noindex = '';
+		echo $noindex;
+	     ?>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+	     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127784620-1"></script>
+	     <script>
+	       window.dataLayer = window.dataLayer || [];
+	       function gtag(){dataLayer.push(arguments);}
+	       gtag('js', new Date());
+	     
+	       gtag('config', 'UA-127784620-1');
+	     </script>
+		 <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80716626-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-80716626-1');
+		</script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+       ym(38477215, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:false
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/38477215" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+
+<meta property="og:url" content="<?='https://www.medswiss.ru' . $APPLICATION->GetCurPage()?>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="<?$APPLICATION->ShowProperty("title")?>">
+<meta property="og:description" content="<?=$APPLICATION->ShowProperty("description")?>">
+<meta name="yandex-verification" content="edd6f2d2e32b66f4" />
+<meta name="yandex-verification" content="5c0c037cb900601d" />
+	</head>
+	<body class="main-page">
+	<?$APPLICATION->ShowPanel();?>
+		<!-- BEGIN POPUPS -->
+		<?$APPLICATION->IncludeComponent(
+			"alb:call.add",
+			"",
+			Array(
+				"IBLOCK_ID" => 14
+			)
+		);?>
+
+		<?$APPLICATION->IncludeComponent(
+			"alb:call.add",
+			"programm",
+			Array(
+				"IBLOCK_ID" => 23
+			)
+		);?>
+		<!-- END POPUPS -->
+		<header itemscope itemtype="http://schema.org/WPHeader">
+			<meta itemprop="headline" content='ООО "Медилюкс-ТМ" — Сеть медицинских центров'>
+			<div class="header-top">
+				<div class="container">
+					<?$APPLICATION->IncludeComponent(
+						"bitrix:menu",
+						"top",
+						Array(
+							"ROOT_MENU_TYPE" => "top_menu",
+							"MENU_CACHE_TYPE" => "N",
+							"MENU_CACHE_TIME" => "3600",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"MENU_CACHE_GET_VARS" => array(""),
+							"MAX_LEVEL" => "1",
+							"CHILD_MENU_TYPE" => "",
+							"USE_EXT" => "N",
+							"DELAY" => "N",
+							"ALLOW_MULTI_SELECT" => "N"
+						)
+					);?>
+					<?/*
+					<div class="cabinet">
+						<a href="javascript:void(0);" class="cabinet-link">Перейти в личный кабинет</a>
+					</div>
+					*/?>
+				</div>
+			</div>
+			<div class="container">
+				<div class="header">
+					<a href="/" class="logo">
+						<?/*
+						<svg id="Группа_1" data-name="Группа 1" xmlns="http://www.w3.org/2000/svg" width="160" height="61" viewBox="0 0 160 61">
+							<defs>
+								<style>
+								.cls-1 {
+									font-size: 8px;
+									fill: #a5a5a5;
+									font-family: 'helveticaneuecyrbold';
+									text-transform: uppercase;
+									letter-spacing: 1.2px;
+								}
+								.cls-2 {
+									fill: #4576e6;
+									fill-rule: evenodd;
+								}
+								</style>
+							</defs>
+							<text id="сеть_медицинских_центров" data-name="сеть медицинских центров" y="59" class="cls-1">сеть медицинских центров</text>
+							<path d="M122.254,89.245l0.126-.117V83.6h8.548V73.51H122.38V65H112.109V73.51H103.6V91.2H95v10.189h8.6v8.488h7.111l0.072-.3A44.4,44.4,0,0,1,115.151,98.2,36.6,36.6,0,0,1,122.254,89.245Zm-2.863,1.794c-0.046.048-.107,0.113-0.144,0.153l-5.978,0V82.585h-8.585V74.623h8.585V66.011h7.938v8.612h8.586v7.962h-8.586l-0.015,6.594c-0.295.294-.822,0.832-1.283,1.312C119.736,90.674,119.559,90.854,119.391,91.039Zm19.3-7.946c-13.67,6.017-21.29,13.63-24.353,26.712h11.824c2.693-4.365,4.86-7.033,8.487-8.906l-0.087,8.774a35.554,35.554,0,0,1,8.595-8.955v9.141l6.99,0.043,0.173-26.754a48.882,48.882,0,0,0-11.606,6.059Zm75.476,10.8c-0.093,3.675-.2,5.3-1.829,5.316-1.657.013-2.313-1.2-2.257-5.351l-2.155,0h-1.742c-0.007,3.71-.183,5.382-2.328,5.276-1.456-.072-2.048-1.5-1.932-5.258h-8.674c-0.344-.215-0.774-0.407-1.055-0.616-4.965-3.707.034-6.386,2.465-2.865a14.341,14.341,0,0,1,.925,1.479h1.975V84.107l-10.774-.033A10.222,10.222,0,0,0,178.1,89.1a9.179,9.179,0,0,0-1.411,6.921c-1.592-2.831-5.119-3.816-7.319-3.916h-6.426v10.949h4.869V96.8c2.095,0,3.672.9,3.791,3.363-0.019,1.828.181,3.816-2.454,4.4H157.53v-1.5h3.355v-3.8l-3.374,0,0.008-2.05h3.365V92.109h-9.2v17.809c6.343,0,12.286.082,18.629,0.083,3.591-.8,5.766-2.683,6.6-4.774l-0.02,4.778h10.537c4.587-.006,7.72-2.638,9.829-5.462,0.043-.058.1-0.02,0.138,0.082,0.3,0.785,1.149,5.007,5.052,5.29,3.155,0.228,5.323-3.733,5.411-3.782,0.034-.018.052-0.023,0.1,0.038,0.806,1.026,5.133,8.229,11.342-.34l0.02,4.043,5.987,0.041L225.338,93.9H214.162Zm-31.649,11.7-5.24-2.58c0.074-1.976.074-2.843,0.074-5.294-0.031-.139-0.076-0.268-0.115-0.4a3.8,3.8,0,0,0,.706.818l6.81,5.068C185.892,104.433,184.6,106.65,182.513,105.6Zm39.476-14.712a3.163,3.163,0,1,0-3.153-3.162A3.158,3.158,0,0,0,221.989,90.883Zm11.559,19.043,1.6-.118a7.7,7.7,0,0,0,3.4-1.435,5.352,5.352,0,0,0,2.006-3.735c-0.2-2.959-5.041-2.981-6.483-4.581a1.272,1.272,0,0,1-.427-0.8c-0.14-1.891,3.467-1.536,4.375.243l1.748,0.029,0.012-5.5a61.1,61.1,0,0,0-9.2.067c-4.319.725-7.09,5.808-4.042,7.882,1.56,1.062,3.012,1.916,4.518,3.116a1.144,1.144,0,0,1,.271.772c-0.4,1.232-3.228-.218-5.254-1.18l0.02,5.233,7.455,0.008h0Zm14.448,0,1.6-.118a7.7,7.7,0,0,0,3.4-1.435A5.348,5.348,0,0,0,255,104.638c-0.2-2.959-5.041-2.981-6.483-4.581a1.282,1.282,0,0,1-.427-0.8c-0.14-1.891,3.467-1.536,4.375.243l1.748,0.029,0.012-5.5a61.1,61.1,0,0,0-9.2.067c-4.319.725-7.09,5.808-4.042,7.882,1.56,1.062,3.012,1.916,4.518,3.116a1.15,1.15,0,0,1,.272.772c-0.405,1.232-3.228-.218-5.254-1.18l0.02,5.233L248,109.926h0Z" transform="translate(-95 -65)" class="cls-2"></path>
+						</svg>
+						*/?>
+						<!-- img src="/local/img/logo-new.svg" alt="logo" -->
+						<!-- img src="/local/css/logo_ng.png" alt="logo" style="width: 160px;" -->
+						<img src="/local/img/logo-new.svg" alt="logo" style="width: 160px;">
+					</a>
+					<div class="header-right">
+						<?$APPLICATION->IncludeComponent(
+							"alb:clinic.choose",
+							"",
+							array()
+						);?>
+						<div class="header-phone">
+							<?
+							$APPLICATION->IncludeFile(
+								'/local/include/head_phone.php',
+								Array(),
+								Array('MODE'=>'html')
+							);
+							?>
+							<span class="time">(Круглосуточно)</span>
+						</div>
+						<a href="javascript:void(0);" class="feedback js-order-call new-btn">Обратный звонок</a>
+						<a href="/order/" class="btn online-write">Записаться на прием</a>
+					</div>
+				</div>
+			</div>
+			<a href="javascript:void(0);" class="gamb js-gamb">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</header>
+		<div class="gamb-hidden js-gamb-hidden"></div>
+		<nav class="b-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<div class="container">
+				<ul class="menu">
+					<li class="menu__li">
+						<a itemprop="url" href="/uslugi/" class="menu__link">Услуги и цены</a>
+						<div class="hidden-menu">
+							<div class="hidden-menu-left">
+								<div class="hidden-menu__title">
+									<span>Категории услуг</span><a href="/uslugi/" class="more">Все услуги</a>
+								</div>
+								<?$APPLICATION->IncludeComponent(
+									"alb:services.menu",
+									"",
+									array()
+								);?>
+							</div>
+							<div class="hidden-menu-right">
+								<div class="hidden-menu__title"><span>Популярные услуги</span></div>
+									<?$APPLICATION->IncludeComponent(
+										"alb:services.popular",
+										"",
+										array()
+									);?>
+								<?
+								/*global $servpop;
+								$servpop = array("PROPERTY_POPULAR_VALUE" => "Y");
+								$APPLICATION->IncludeComponent(
+									"bitrix:news.list",
+									"services_menu",
+									Array(
+										"ACTIVE_DATE_FORMAT" => "d.m.Y",
+										"ADD_SECTIONS_CHAIN" => "N",
+										"AJAX_MODE" => "N",
+										"AJAX_OPTION_ADDITIONAL" => "",
+										"AJAX_OPTION_HISTORY" => "N",
+										"AJAX_OPTION_JUMP" => "N",
+										"AJAX_OPTION_STYLE" => "Y",
+										"CACHE_FILTER" => "N",
+										"CACHE_GROUPS" => "Y",
+										"CACHE_TIME" => "36000000",
+										"CACHE_TYPE" => "A",
+										"CHECK_DATES" => "Y",
+										"DETAIL_URL" => "",
+										"DISPLAY_BOTTOM_PAGER" => "N",
+										"DISPLAY_DATE" => "Y",
+										"DISPLAY_NAME" => "Y",
+										"DISPLAY_PICTURE" => "Y",
+										"DISPLAY_PREVIEW_TEXT" => "Y",
+										"DISPLAY_TOP_PAGER" => "N",
+										"FIELD_CODE" => array("", ""),
+										"FILTER_NAME" => "servpop",
+										"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+										"IBLOCK_ID" => "1",
+										"IBLOCK_TYPE" => "content",
+										"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+										"INCLUDE_SUBSECTIONS" => "Y",
+										"MESSAGE_404" => "",
+										"NEWS_COUNT" => "16",
+										"PAGER_BASE_LINK_ENABLE" => "N",
+										"PAGER_DESC_NUMBERING" => "N",
+										"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+										"PAGER_SHOW_ALL" => "N",
+										"PAGER_SHOW_ALWAYS" => "N",
+										"PAGER_TEMPLATE" => ".default",
+										"PAGER_TITLE" => "Новости",
+										"PARENT_SECTION" => "",
+										"PARENT_SECTION_CODE" => "",
+										"PREVIEW_TRUNCATE_LEN" => "",
+										"PROPERTY_CODE" => array("POPULAR", ""),
+										"SET_BROWSER_TITLE" => "N",
+										"SET_LAST_MODIFIED" => "N",
+										"SET_META_DESCRIPTION" => "N",
+										"SET_META_KEYWORDS" => "N",
+										"SET_STATUS_404" => "N",
+										"SET_TITLE" => "N",
+										"SHOW_404" => "N",
+										"SORT_BY1" => "NAME",
+										"SORT_BY2" => "SORT",
+										"SORT_ORDER1" => "ASC",
+										"SORT_ORDER2" => "ASC"
+									)
+								);*/?>
+							</div>
+						</div>
+					</li>
+					<li class="menu__li"><a href="/action/" class="menu__link">Акции</a>
+						<div class="hidden-menu">
+							<div class="hidden-menu-wrap">
+								<div class="hidden-menu__title">
+									<span>Последние акции</span><a itemprop="url" href="/action/" class="more">Все акции</a>
+								</div>
+								<?
+									global $actionFilter;
+									$actionFilter = array(
+										"<=PROPERTY_START" => date("Y-m-d H:i:s"),
+										">=PROPERTY_FINISH" => date("Y-m-d H:i:s"),
+									);
+								?>
+								<?$APPLICATION->IncludeComponent(
+									"bitrix:news.list",
+									"action_menu",
+									Array(
+										"ACTIVE_DATE_FORMAT" => "d.m.Y",
+										"ADD_SECTIONS_CHAIN" => "N",
+										"AJAX_MODE" => "N",
+										"AJAX_OPTION_ADDITIONAL" => "",
+										"AJAX_OPTION_HISTORY" => "N",
+										"AJAX_OPTION_JUMP" => "N",
+										"AJAX_OPTION_STYLE" => "Y",
+										"CACHE_FILTER" => "N",
+										"CACHE_GROUPS" => "Y",
+										"CACHE_TIME" => "36000000",
+										"CACHE_TYPE" => "A",
+										"CHECK_DATES" => "Y",
+										"DETAIL_URL" => "",
+										"DISPLAY_BOTTOM_PAGER" => "N",
+										"DISPLAY_DATE" => "Y",
+										"DISPLAY_NAME" => "Y",
+										"DISPLAY_PICTURE" => "Y",
+										"DISPLAY_PREVIEW_TEXT" => "Y",
+										"DISPLAY_TOP_PAGER" => "N",
+										"FIELD_CODE" => array("", ""),
+										"FILTER_NAME" => "actionFilter",
+										"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+										"IBLOCK_ID" => "8",
+										"IBLOCK_TYPE" => "content",
+										"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+										"INCLUDE_SUBSECTIONS" => "Y",
+										"MESSAGE_404" => "",
+										"NEWS_COUNT" => "2",
+										"PAGER_BASE_LINK_ENABLE" => "N",
+										"PAGER_DESC_NUMBERING" => "N",
+										"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+										"PAGER_SHOW_ALL" => "N",
+										"PAGER_SHOW_ALWAYS" => "N",
+										"PAGER_TEMPLATE" => ".default",
+										"PAGER_TITLE" => "Новости",
+										"PARENT_SECTION" => "",
+										"PARENT_SECTION_CODE" => "",
+										"PREVIEW_TRUNCATE_LEN" => "",
+										"PROPERTY_CODE" => array("FINISH", ""),
+										"SET_BROWSER_TITLE" => "N",
+										"SET_LAST_MODIFIED" => "N",
+										"SET_META_DESCRIPTION" => "N",
+										"SET_META_KEYWORDS" => "N",
+										"SET_STATUS_404" => "N",
+										"SET_TITLE" => "N",
+										"SHOW_404" => "N",
+										"SORT_BY1" => "SORT",
+										"SORT_BY2" => "SORT",
+										"SORT_ORDER1" => "ASC",
+										"SORT_ORDER2" => "ASC"
+									)
+								);?>
+							</div>
+						</div>
+					</li>
+					<li class="menu__li"><a itemprop="url" href="/programmy/" class="menu__link">Программы</a>
+						<div class="hidden-menu">
+							<div class="hidden-menu-left">
+								<div class="hidden-menu__title">
+									<span>Виды программ</span><a itemprop="url" href="/programmy/" class="more">Все программы</a>
+								</div>
+								<?
+									$arProgHas = array();
+									$res = CIBlockElement::GetList(array(), array("IBLOCK_ID" => 3, "ACTIVE" => "Y"), false, false, array("PROPERTY_TYPE"));
+									while($obProgr = $res->GetNext())
+									{
+										if($obProgr["PROPERTY_TYPE_ENUM_ID"] == 11)
+											$arProgHas["HOME"] = true;
+										if($obProgr["PROPERTY_TYPE_ENUM_ID"] == 12)
+											$arProgHas["CLINIC"] = true;
+										if($obProgr["PROPERTY_TYPE_ENUM_ID"] == 13)
+											$arProgHas["COMPLEX"] = true;
+									}
+								?>
+								<div class="hidden-menu-content">
+									<div class="programm-links">
+										<?if($arProgHas["HOME"]):?><a href="/programmy/?progtype=home&menu=Y" class="service__link service__link_onhome">На дому</a><?endif;?>
+										<?if($arProgHas["CLINIC"]):?><a href="/programmy/?progtype=clinic&menu=Y" class="service__link service__link_clinic">Взрослым</a><?endif;?>
+										<?if($arProgHas["COMPLEX"]):?><a href="/programmy/?progtype=complex&menu=Y" class="service__link service__link_complex">Детям</a><?endif;?>
+										<?/*<a href="javascript:void(0);" class="service__link service__link_calc">Калькулятор программ</a>*/?>
+									</div>
+								</div>
+							</div>
+							<div class="hidden-menu-right">
+								<div class="hidden-menu__title"><span>Популярная программа</span></div>
+								<?
+									global $programpop;
+									$programpop = array("PROPERTY_POPULAR_VALUE" => "Y");
+								?>
+								<?$APPLICATION->IncludeComponent(
+									"bitrix:news.list",
+									"programm_menu",
+									Array(
+										"ACTIVE_DATE_FORMAT" => "d.m.Y",
+										"ADD_SECTIONS_CHAIN" => "N",
+										"AJAX_MODE" => "N",
+										"AJAX_OPTION_ADDITIONAL" => "",
+										"AJAX_OPTION_HISTORY" => "N",
+										"AJAX_OPTION_JUMP" => "N",
+										"AJAX_OPTION_STYLE" => "Y",
+										"CACHE_FILTER" => "N",
+										"CACHE_GROUPS" => "Y",
+										"CACHE_TIME" => "36000000",
+										"CACHE_TYPE" => "A",
+										"CHECK_DATES" => "Y",
+										"DETAIL_URL" => "",
+										"DISPLAY_BOTTOM_PAGER" => "N",
+										"DISPLAY_DATE" => "Y",
+										"DISPLAY_NAME" => "Y",
+										"DISPLAY_PICTURE" => "Y",
+										"DISPLAY_PREVIEW_TEXT" => "Y",
+										"DISPLAY_TOP_PAGER" => "N",
+										"FIELD_CODE" => array("", ""),
+										"FILTER_NAME" => "programpop",
+										"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+										"IBLOCK_ID" => "3",
+										"IBLOCK_TYPE" => "content",
+										"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+										"INCLUDE_SUBSECTIONS" => "Y",
+										"MESSAGE_404" => "",
+										"NEWS_COUNT" => "1",
+										"PAGER_BASE_LINK_ENABLE" => "N",
+										"PAGER_DESC_NUMBERING" => "N",
+										"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+										"PAGER_SHOW_ALL" => "N",
+										"PAGER_SHOW_ALWAYS" => "N",
+										"PAGER_TEMPLATE" => ".default",
+										"PAGER_TITLE" => "Новости",
+										"PARENT_SECTION" => "",
+										"PARENT_SECTION_CODE" => "",
+										"PREVIEW_TRUNCATE_LEN" => "",
+										"PROPERTY_CODE" => array("VALUTA", "PERIOD", "POPULAR", "COST", ""),
+										"SET_BROWSER_TITLE" => "N",
+										"SET_LAST_MODIFIED" => "N",
+										"SET_META_DESCRIPTION" => "N",
+										"SET_META_KEYWORDS" => "N",
+										"SET_STATUS_404" => "N",
+										"SET_TITLE" => "N",
+										"SHOW_404" => "N",
+										"SORT_BY1" => "SORT",
+										"SORT_BY2" => "SORT",
+										"SORT_ORDER1" => "ASC",
+										"SORT_ORDER2" => "ASC"
+									)
+								);?>
+							</div>
+						</div>
+					</li>
+					<li class="menu__li">
+						<a itemprop="url" href="/nashi-vrachi/" class="menu__link">Наши врачи</a>
+						<?$APPLICATION->IncludeComponent(
+							"alb:doctors.menu",
+							"",
+							array()
+						);?>
+					</li>
+					<li class="menu__li"><a href="/adresa-klinik/" class="menu__link">Медицинские центры</a>
+						<div class="hidden-menu">
+							<?$APPLICATION->IncludeComponent(
+								"alb:clinics.menu",
+								"",
+								array()
+							);?>
+						</div>
+					</li>
+					<li class="menu__li"><a itemprop="url" href="/news/" class="menu__link">Новости</a></li>
+					<li class="menu__li"><a itemprop="url" href="/library/" class="menu__link <?/*active*/?>">Полезные статьи</a>
+						<div class="hidden-menu">
+							<div class="hidden-menu-left">
+								<div class="hidden-menu__title">
+									<span>Библиотека здоровья</span>
+									<a href="/library/" class="more">Все статьи</a>
+								</div>
+								<?$APPLICATION->IncludeComponent(
+									"bitrix:catalog.section.list",
+									"library_menu",
+									Array(
+										"ADD_SECTIONS_CHAIN" => "N",
+										"CACHE_GROUPS" => "Y",
+										"CACHE_TIME" => "36000000",
+										"CACHE_TYPE" => "A",
+										"COUNT_ELEMENTS" => "N",
+										"IBLOCK_ID" => "15",
+										"IBLOCK_TYPE" => "content",
+										"SECTION_CODE" => "",
+										"SECTION_FIELDS" => array("", ""),
+										"SECTION_ID" => $_REQUEST["SECTION_ID"],
+										"SECTION_URL" => "",
+										"SECTION_USER_FIELDS" => array("", ""),
+										"SHOW_PARENT_NAME" => "Y",
+										"TOP_DEPTH" => "1",
+										"VIEW_MODE" => "LINE"
+									)
+								);?>
+							</div>
+							<div class="hidden-menu-right">
+								<div class="hidden-menu__title">
+									<span>Популярные статьи</span>
+								</div>
+								<?
+									global $librarypop;
+									$librarypop = array("PROPERTY_POPULAR_VALUE" => "Y", "SECTION_ACTIVE" => "Y");
+								?>
+								<?$APPLICATION->IncludeComponent(
+									"bitrix:news.list",
+									"library_menu",
+									Array(
+										"ACTIVE_DATE_FORMAT" => "d.m.Y",
+										"ADD_SECTIONS_CHAIN" => "N",
+										"AJAX_MODE" => "N",
+										"AJAX_OPTION_ADDITIONAL" => "",
+										"AJAX_OPTION_HISTORY" => "N",
+										"AJAX_OPTION_JUMP" => "N",
+										"AJAX_OPTION_STYLE" => "Y",
+										"CACHE_FILTER" => "N",
+										"CACHE_GROUPS" => "Y",
+										"CACHE_TIME" => "36000000",
+										"CACHE_TYPE" => "A",
+										"CHECK_DATES" => "Y",
+										"DETAIL_URL" => "",
+										"DISPLAY_BOTTOM_PAGER" => "N",
+										"DISPLAY_DATE" => "Y",
+										"DISPLAY_NAME" => "Y",
+										"DISPLAY_PICTURE" => "Y",
+										"DISPLAY_PREVIEW_TEXT" => "Y",
+										"DISPLAY_TOP_PAGER" => "N",
+										"FIELD_CODE" => array("", ""),
+										"FILTER_NAME" => "librarypop",
+										"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+										"IBLOCK_ID" => "15",
+										"IBLOCK_TYPE" => "content",
+										"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+										"INCLUDE_SUBSECTIONS" => "Y",
+										"MESSAGE_404" => "",
+										"NEWS_COUNT" => "2",
+										"PAGER_BASE_LINK_ENABLE" => "N",
+										"PAGER_DESC_NUMBERING" => "N",
+										"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+										"PAGER_SHOW_ALL" => "N",
+										"PAGER_SHOW_ALWAYS" => "N",
+										"PAGER_TEMPLATE" => ".default",
+										"PAGER_TITLE" => "Новости",
+										"PARENT_SECTION" => "",
+										"PARENT_SECTION_CODE" => "",
+										"PREVIEW_TRUNCATE_LEN" => "",
+										"PROPERTY_CODE" => array("POPULAR", ""),
+										"SET_BROWSER_TITLE" => "N",
+										"SET_LAST_MODIFIED" => "N",
+										"SET_META_DESCRIPTION" => "N",
+										"SET_META_KEYWORDS" => "N",
+										"SET_STATUS_404" => "N",
+										"SET_TITLE" => "N",
+										"SHOW_404" => "N",
+										"SORT_BY1" => "SORT",
+										"SORT_BY2" => "SORT",
+										"SORT_ORDER1" => "ASC",
+										"SORT_ORDER2" => "ASC"
+									)
+								);?>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<?$APPLICATION->IncludeComponent(
+					"bitrix:search.form",
+					"",
+					Array(
+						"PAGE" => "#SITE_DIR#search/index.php",
+						"USE_SUGGEST" => "N"
+					)
+				);?>
+			</div>
+		</nav>
+		<?if($GLOBALS["APPLICATION"]->GetCurPage() !== "/"):?>
+		<div class="container">
+			<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "template1", Array(
+	"START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+		"PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+		"SITE_ID" => SITE_ID,	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+	),
+	false
+);
+			?>
+		</div-->
+		<?endif;?>

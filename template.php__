@@ -1,0 +1,173 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+$this->setFrameMode(true);
+?>
+
+    <div class="med-centers__title">
+        <? if(preg_match('%/adresa-klinik/%siU', $_SERVER['REQUEST_URI'])): ?><h1>Медицинские центры</h1><? else: ?><div class="h1">Медицинские центры</div><? endif; ?>
+    </div>
+    
+    <div class="med-centers-content" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="MedSwiss">
+        <div class="u-adress-content">
+			<?foreach($arResult["ITEMS"] as $arItem):?>
+                <div class="u-adress-item"> 
+					<?if( $arItem["PROPERTIES"]["IS_CLOSED"]["VALUE"] == 1):?>
+                        <div class="u-adress-item__category u-adress-item__category_close">Временно закрыто</div>
+					<?elseif($arItem["PROPERTIES"]["OPEN24"]["VALUE"] == "Y" ):?>
+                        <div class="u-adress-item__category u-adress-item__category_open">Сейчас открыто</div>
+					<?else:?>
+						<?=openOrClose($arItem["PROPERTIES"]["WORK"]);?>
+					<?endif;?>
+                    <div class="u-adress-item__title">
+                        <span>
+                            <?if($arItem["PROPERTIES"]["VIEW_LINK"]['VALUE'] == "Y"):?>
+                                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a> 
+                            <?else:?> 
+                                <?=$arItem["NAME"]?>
+                            <?endif;?> 
+                        </span>
+						<?if(!empty($arItem["PROPERTIES"]["METRO"]["VALUE"])):?> 
+                            <div class="u-adress-item__title-mini">
+								<div class='u-adress-item__left'>
+								<?foreach($arItem["PROPERTIES"]["METRO"]["VALUE"] as $oneMetro):?>
+									<u class="ms <?=$arResult["METRO"][$oneMetro]["COLOR"]?>"></u>
+								<?endforeach;?>
+								</div>
+								<div class='u-adress-item__right'>
+								<?foreach($arItem["PROPERTIES"]["METRO"]["VALUE"] as $oneMetro):?>
+									<?if($arResult["METRO"][$oneMetro]["MCK"]!="Y"):?>м.<?endif;?>&nbsp;<?=$arResult["METRO"][$oneMetro]["NAME"]?>
+								<?endforeach;?>
+								</div>
+                            </div>
+						<?endif;?>
+                    </div>
+                    <div class="u-adress-item__adress" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality"><?=$arItem["PROPERTIES"]["CITY"]["VALUE"]?></span>
+                    <div itemprop="streetAddress"><?=$arItem["PROPERTIES"]["ADDRESS"]["VALUE"]?></div></div>
+					<?if(strlen($arItem["PROPERTIES"]["WORK_STRING"]["~VALUE"]["TEXT"]) || $arItem["PROPERTIES"]["OPEN24"]["VALUE"] == "Y"):?>
+                        <div class="u-adress-item__time">
+							<?=$arItem["PROPERTIES"]["WORK_STRING"]["~VALUE"]["TEXT"]?>
+							<?if($arItem["PROPERTIES"]["OPEN24"]["VALUE"] == "Y"):?>
+                                <i>Круглосуточный травмпункт</i>
+							<?endif;?>
+                        </div>
+					<?endif;?>
+					<?if(strlen($arItem["PROPERTIES"]["PHONE"]["VALUE"])):?>
+                        <div class="u-adress-item__phone">
+                            <span>Телефон</span><a href="tel:<?=$arItem["PROPERTIES"]["PHONE"]["VALUE"]?>" itemprop="telephone"><?=$arItem["PROPERTIES"]["PHONE"]["VALUE"]?></a>
+                        </div>
+					<?endif;?>
+					<?if(strlen($arItem["PROPERTIES"]["PHONE2"]["VALUE"])):?>
+                        <div class="u-adress-item__phone">
+                            <span>Телефон</span><a href="tel:<?=$arItem["PROPERTIES"]["PHONE2"]["VALUE"]?>" itemprop="telephone"><?=$arItem["PROPERTIES"]["PHONE2"]["VALUE"]?></a>
+                        </div>
+					<?endif;?>
+					<?if(strlen($arItem["PROPERTIES"]["PHONE3"]["VALUE"])):?>
+                        <div class="u-adress-item__phone">
+                            <span>Телефон</span><a href="tel:<?=$arItem["PROPERTIES"]["PHONE3"]["VALUE"]?>" itemprop="telephone"><?=$arItem["PROPERTIES"]["PHONE3"]["VALUE"]?></a>
+                        </div>
+					<?endif;?>
+					<? $coords = explode(',',str_replace(" ","", $arItem['PROPERTIES']['COORDS']['VALUE']))?>
+                    <div class="u-adress-item__nav">
+                        <a href='yandexnavi://build_route_on_map?lat_to=<?=$coords[0]?>&lon_to=<?=$coords[1]?>'>Яндекс карты</a>
+                        <a href='https://www.google.com/maps/place/<?=$coords[0]?>,<?=$coords[1]?>'>Google Карты</a>
+                    </div>
+					<?if($arItem["PROPERTIES"]["GOSITE"]["VALUE"] == "Y" && strlen($arItem["PROPERTIES"]["SITE"]["VALUE"])):?>
+                        <a href="<?=$arItem["PROPERTIES"]["SITE"]["VALUE"]?>" target="_blank" class="btn2"<?if($arItem["PROPERTIES"]["SITE"]["VALUE"]=='https://medswiss-spb.ru'):?> rel="noindex"<?endif;?>>Перейти на сайт</a>
+					<? elseif ($arItem["ID"] == 196729): ?>
+						<a href="/uslugi/skoraya-pomoshch/" class="btn2">Подробнее</a>
+					<?else:?>
+                        <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="btn2">Как проехать</a>
+					<?endif;?>
+
+				
+                </div>
+
+     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "<?=$arItem["PROPERTIES"]["CITY"]["VALUE"]?>",
+        "streetAddress": "<?=$arItem["PROPERTIES"]["ADDRESS"]["VALUE"]?>"
+      },
+      "name": "<?=$arItem["NAME"]?>",
+      "telephone": "<?=$arItem["PROPERTIES"]["PHONE"]["VALUE"]?>"
+    }
+</script>
+			<?endforeach;?>
+        </div>
+    </div>
+
+
+
+
+
+<?/*
+	<div class="med-centers__title">
+		<h2>На карте</h2>
+	</div>
+	<div class="med-centers-content">
+		<div class="map">
+			<div id="map-canvas"></div>
+			<div class="map-content">
+				<?foreach($arResult["ITEMS"] as $arItem):?>
+					<?if($arItem["ID"] != 249):?>
+						<div class="u-adress-item__title"><span><?=$arItem["NAME"]?></span>
+							<?if(!empty($arItem["PROPERTIES"]["METRO"]["VALUE"])):?>
+								<?foreach($arItem["PROPERTIES"]["METRO"]["VALUE"] as $oneMetro):?>
+									<u class="ms <?=$arResult["METRO"][$oneMetro]["COLOR"]?>"></u>
+								<?endforeach;?>
+								<div class="u-adress-item__title-mini">
+									<?foreach($arItem["PROPERTIES"]["METRO"]["VALUE"] as $oneMetro):?>
+										м. <?=$arResult["METRO"][$oneMetro]["NAME"]?>
+									<?endforeach;?>
+								</div>
+							<?endif;?>
+						</div>
+					<?endif;?>
+				<?endforeach;?>
+			</div>
+		</div>
+	</div>
+	*/?>
+
+<?/*
+<script>
+$(function () {
+	// maps menu
+	if ($('#map-canvas').length) {
+		var map;
+		function initialize_two() {
+		  var mapOptions = {
+			zoom: 15,
+			scrollwheel: false,
+			center: new google.maps.LatLng(55.8145702,37.6459709),
+			styles:   [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"visibility":"on"},{"weight":"0.01"},{"saturation":"-100"},{"lightness":"0"},{"gamma":"0.86"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]}]
+		  };
+		  map = new google.maps.Map(document.getElementById('map-canvas'),
+			  mapOptions);
+			  
+			var bounds = new google.maps.LatLngBounds();
+			var image = '/local/img/marker.png';
+			
+			<?foreach($arResult["ITEMS"] as $idClin => $oneClinic):?>
+				<?if($oneClinic["ID"] != 249):?>
+					<?$tmp_coord = explode(",",$oneClinic["PROPERTIES"]["COORDS"]["VALUE"]);?>
+					var myLatLng = new google.maps.LatLng(<?=$tmp_coord[0]?>, <?=$tmp_coord[1]?>);
+					var beachMarker = new google.maps.Marker({
+						position: myLatLng,
+						map: map,
+						icon: image
+					});
+					bounds.extend(myLatLng);
+				<?endif;?>
+			<?endforeach;?>
+			
+			map.fitBounds(bounds);
+
+		}
+	google.maps.event.addDomListener(window, 'load', initialize_two);
+  };
+});
+</script>
+*/?>
