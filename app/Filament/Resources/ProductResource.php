@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\FillingResource\RelationManagers\FillingRelationManager;
 use App\Filament\Resources\ProductCategoryResource\RelationManagers\CategoriesRelationManager;
 use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
@@ -26,6 +27,7 @@ class ProductResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\Checkbox::make('published')->inline(),
                 Forms\Components\TextInput::make('name')
                     ->reactive()
                     ->afterStateUpdated(function (Closure $set, $state) {
@@ -43,12 +45,26 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('slug')
                     ->disabled()
                     ->required(),
-                Forms\Components\TextInput::make('image'),
-                Forms\Components\TextInput::make('intro_text'),
-                Forms\Components\TextArea::make('description'),
-                Forms\Components\Checkbox::make('published')->inline(),
+                Forms\Components\MarkdownEditor::make('intro_text')->name("Анонс"),
+                Forms\Components\MarkdownEditor::make('description')->name("Описание"),
+                Forms\Components\TextInput::make('image')->name('Картинка'),
+                Forms\Components\TextInput::make('article')->name('Артикль'),
+                Forms\Components\TextInput::make('type_products'),
+                Forms\Components\TextInput::make('coverage'),
+                Forms\Components\TextInput::make('weight_photo'),
+                Forms\Components\TextInput::make('number_tiers'),
+                Forms\Components\TextInput::make('congratulatory_signature'),
+                Forms\Components\MarkdownEditor::make('title'),
+                Forms\Components\MarkdownEditor::make('meta_description'),
+
+
                 Forms\Components\Select::make('category_id')
-                    ->relationship('category', 'name')
+                    ->relationship('category', 'name'),
+
+                Forms\Components\Select::make('filling_id')
+                    ->relationship('filling', 'name'),
+                Forms\Components\Select::make('user_id')
+                    ->relationship('user', 'name')
             ]);
     }
 
@@ -78,8 +94,10 @@ class ProductResource extends Resource
 
     public static function getRelations(): array
     {
+        // http://joxi.ru/nAy1O5Bf9OBpeA
         return [
-//            CategoriesRelationManager::class
+//            CategoriesRelationManager::class,
+//            FillingRelationManager::class
         ];
     }
 
