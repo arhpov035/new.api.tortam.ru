@@ -61,8 +61,6 @@ class ProductResource extends Resource
                 Forms\Components\Select::make('category_id')
                     ->relationship('category', 'name'),
 
-                Forms\Components\Select::make('filling_id')
-                    ->relationship('filling', 'name'),
                 Forms\Components\Select::make('user_id')
                     ->relationship('user', 'name')
             ]);

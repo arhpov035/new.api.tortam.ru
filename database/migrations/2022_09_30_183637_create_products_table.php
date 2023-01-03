@@ -23,12 +23,6 @@ class CreateProductsTable extends Migration
             $table->bigInteger('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on('product_categories');
 
-            $table->bigInteger('filling_id')->unsigned()->nullable();
-            $table->foreign('filling_id')->references('id')->on('fillings');
-
-            $table->bigInteger('seo_meta_id')->unsigned()->nullable();
-            $table->foreign('seo_meta_id')->references('id')->on('seo_metas');
-
             $table->string('slug')->unique();
             $table->string('name')->unique();
             $table->string('article')->nullable();
@@ -39,8 +33,10 @@ class CreateProductsTable extends Migration
             $table->string('coverage')->nullable();
             $table->string('weight_photo')->nullable();
             $table->string('number_tiers')->nullable();
-            $table->text('intro_text')->nullable();
+            $table->longText('intro_text')->nullable();
             $table->longText('description')->nullable();
+            $table->longText('meta_title')->nullable();
+            $table->longText('meta_description')->nullable();
             $table->string('congratulatory_signature')->nullable();
             $table->boolean('published')->default(true);
 

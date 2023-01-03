@@ -9,6 +9,9 @@ use App\Http\Resources\ProductIndexResource;
 use App\Http\Resources\ProductShowResourse;
 use App\Models\Product;
 use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\Mail;
+use Mail;
+use App\Mail\MailNotify;
 
 class ProductController extends Controller
 {
@@ -22,6 +25,21 @@ class ProductController extends Controller
         $products = Product::where('published', true)->with(['user', 'category'])->skip($skip)->take(12)->get();
         $productCollection = ProductIndexResource::collection($products);
         return response($productCollection);
+    }
+
+    public function mail()
+    {
+        $data = [
+            'subject' => 'Cambo Tutorial mail',
+            'body' => 'Hello first email'
+        ];
+
+        try {
+            Mail::to('arhipov035@gmail.com')->send(new MailNotify($data));
+            return response()->json(['Great check you ']);
+        }catch (Exception $th) {
+            return response()->json(['Sorry Error']);
+        }
     }
 
     /**
@@ -45,6 +63,7 @@ class ProductController extends Controller
 
         return response($product->save());
     }
+
 
     /**
      * Display the specified resource.

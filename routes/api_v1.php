@@ -38,6 +38,14 @@ Route::apiResource('/product', \App\Http\Controllers\Api\V1\ProductController::c
     'store', 'show', 'update', 'destroy'
 ])->names('product');
 
+//Route::get('/mail', [\App\Http\Controllers\Api\V1\ProductController::class, 'mail']);
+
+Route::get('/mail', [ProductController::class, 'mail']);
+
+//Route::apiResource('/mail', \App\Http\Controllers\Api\V1\ProductController::class)->only([
+//    'mail'
+//])->names('mail');
+
 
 //Route::apiResource('/categories', \App\Http\Controllers\Api\V1\ProductCategoryController::class)->names('categories');
 
