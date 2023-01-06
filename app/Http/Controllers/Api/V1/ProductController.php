@@ -27,13 +27,13 @@ class ProductController extends Controller
         return response($productCollection);
     }
 
-    public function mail()
+    public function mail(Request $request)
     {
         $data = [
             'subject' => 'Cambo Tutorial mail',
             'body' => 'Hello first email'
         ];
-
+        return response()->json($request);
         try {
             Mail::to('arhipov035@gmail.com')->send(new MailNotify($data));
             return response()->json(['Great check you ']);
