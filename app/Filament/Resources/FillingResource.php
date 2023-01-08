@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\FillingResource\Pages;
 use App\Filament\Resources\FillingResource\RelationManagers;
 use App\Models\Filling;
+use Closure;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -12,6 +13,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Str;
 
 class FillingResource extends Resource
 {
@@ -23,10 +25,15 @@ class FillingResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255),
                 Forms\Components\TextInput::make('name')
+                    ->reactive()
+                    ->afterStateUpdated(function (Closure $set, $state) {
+                        $set('slug', Str::slug($state));
+                    })
+                    ->helperText('Введите имя')
+                    ->autofocus()
+                    ->required(),
+                Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('image')
@@ -66,14 +73,14 @@ class FillingResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -81,5 +88,5 @@ class FillingResource extends Resource
             'create' => Pages\CreateFilling::route('/create'),
             'edit' => Pages\EditFilling::route('/{record}/edit'),
         ];
-    }    
+    }
 }
