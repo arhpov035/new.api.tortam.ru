@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\V1\OrderController;
 use App\Http\Controllers\Api\V1\ProductController;
 use \app\Http\Controllers\Api\V1\Auth\AuthController;
+use App\Http\Controllers\Api\V1\ProductFillingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -44,6 +45,7 @@ Route::apiResource('/product', \App\Http\Controllers\Api\V1\ProductController::c
 Route::get('/mail', [ProductController::class, 'mail']);
 Route::get('/order', [OrderController::class, 'store']);
 Route::get('/order_id', [OrderController::class, 'index']);
+Route::get('/fillings', [ProductFillingController::class, 'index']);
 
 //Route::apiResource('/mail', \App\Http\Controllers\Api\V1\ProductController::class)->only([
 //    'mail'
