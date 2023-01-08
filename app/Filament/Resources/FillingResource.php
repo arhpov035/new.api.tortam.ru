@@ -36,8 +36,7 @@ class FillingResource extends Resource
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('image')
-                    ->maxLength(255),
+                Forms\Components\TextInput::make('image'),
                 Forms\Components\Textarea::make('structure'),
                 Forms\Components\Textarea::make('description'),
                 Forms\Components\Toggle::make('published')
