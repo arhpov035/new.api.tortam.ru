@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\FillingResource\RelationManagers\FillingRelationManager;
 use App\Filament\Resources\FillingResource\Pages;
 use App\Filament\Resources\FillingResource\RelationManagers;
 use App\Models\Filling;
@@ -36,7 +37,7 @@ class FillingResource extends Resource
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('image'),
+                Forms\Components\TextInput::make('image')->name('Картинка'),
                 Forms\Components\Textarea::make('structure'),
                 Forms\Components\Textarea::make('description'),
                 Forms\Components\Toggle::make('published')
@@ -50,16 +51,9 @@ class FillingResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('image'),
-                Tables\Columns\TextColumn::make('structure'),
-                Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\IconColumn::make('published')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime(),
-                Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime(),
             ])
             ->filters([
