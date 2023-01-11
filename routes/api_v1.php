@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\V1\OrderController;
+use App\Http\Controllers\Api\V1\ProductCategoryController;
 use App\Http\Controllers\Api\V1\ProductController;
 use \app\Http\Controllers\Api\V1\Auth\AuthController;
 use App\Http\Controllers\Api\V1\ProductFillingController;
@@ -46,6 +47,7 @@ Route::get('/mail', [ProductController::class, 'mail']);
 Route::get('/order', [OrderController::class, 'store']);
 Route::get('/order_id', [OrderController::class, 'index']);
 Route::get('/fillings', [ProductFillingController::class, 'index']);
+Route::get('/categoryprod', [ProductCategoryController::class, 'product']);
 
 //Route::apiResource('/mail', \App\Http\Controllers\Api\V1\ProductController::class)->only([
 //    'mail'

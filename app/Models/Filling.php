@@ -15,6 +15,8 @@ class Filling extends Model
         'slug',
         'name',
         'description',
+        'image',
+        'structure',
         'published'
     ];
 
