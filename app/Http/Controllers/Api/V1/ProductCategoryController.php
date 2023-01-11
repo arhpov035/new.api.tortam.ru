@@ -19,6 +19,12 @@ class ProductCategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function product($slug){
+        $categories = ProductCategory::whereSlug($slug)->where('published', true)->with(['products'])->get();
+        return response($categories);
+    }
+
     public function index($skip = 0)
     {
 //        $categories = ProductCategory::where('published', true)->get();
