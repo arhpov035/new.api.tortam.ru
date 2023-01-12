@@ -9,6 +9,7 @@ use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
 use Closure;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -16,6 +17,8 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
+use Livewire\TemporaryUploadedFile;
+use function Livewire\str;
 
 class ProductResource extends Resource
 {
@@ -47,7 +50,13 @@ class ProductResource extends Resource
                     ->required(),
                 Forms\Components\MarkdownEditor::make('intro_text')->name("Анонс"),
                 Forms\Components\MarkdownEditor::make('description')->name("Описание"),
-                Forms\Components\TextInput::make('image')->name('Картинка'),
+//                Forms\Components\TextInput::make('image')->name('Картинка'),
+                FileUpload::make('image')
+                    ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+                        $fileName = $file->hashName();
+                        $name = explode('.', $fileName);
+                        return (string) str('images/products/' . date_format(now(), 'FY') . '/image/' . $name[0] . '.png');
+                    }),
                 Forms\Components\TextInput::make('article')->name('Артикль'),
                 Forms\Components\TextInput::make('type_products'),
                 Forms\Components\TextInput::make('coverage'),
@@ -56,8 +65,6 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('congratulatory_signature'),
                 Forms\Components\MarkdownEditor::make('title'),
                 Forms\Components\MarkdownEditor::make('meta_description'),
-
-
                 Forms\Components\Select::make('category_id')
                     ->relationship('category', 'name'),
 
@@ -70,7 +77,7 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-//                 Tables\Columns\ImageColumn::make('image'),
+                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('created_at')
