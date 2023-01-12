@@ -51,12 +51,13 @@ class ProductResource extends Resource
                 Forms\Components\MarkdownEditor::make('intro_text')->name("Анонс"),
                 Forms\Components\MarkdownEditor::make('description')->name("Описание"),
 //                Forms\Components\TextInput::make('image')->name('Картинка'),
-                FileUpload::make('image')
-                    ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
-                        $fileName = $file->hashName();
-                        $name = explode('.', $fileName);
-                        return (string) str('images/products/' . date_format(now(), 'FY') . '/image/' . $name[0] . '.png');
-                    }),
+//                FileUpload::make('image')
+//                    ->getUploadedFileNameForStorageUsing(function (TemporaryUploadedFile $file): string {
+//                        $fileName = $file->hashName();
+//                        $name = explode('.', $fileName);
+//                        return (string) str('images/products/' . date_format(now(), 'FY') . '/image/' . $name[0] . '.png');
+//                    }),
+                FileUpload::make('image'),
                 Forms\Components\TextInput::make('article')->name('Артикль'),
                 Forms\Components\TextInput::make('type_products'),
                 Forms\Components\TextInput::make('coverage'),
